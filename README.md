@@ -13,13 +13,13 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 配置好使用`cnpm`
 
 ## 安装Hexo
+进入hexo-blog-source目录
 ```
 cnpm install -g hexo-cli
 cnpm install hexo --save
 ```
 
 ## 安装主题和渲染器
-进入themes同级目录
 ```
 git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
 cnpm install hexo-renderer-pug --save
