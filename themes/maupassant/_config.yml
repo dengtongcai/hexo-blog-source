@@ -11,7 +11,7 @@ gitment:
   client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
   client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
 gitalk:
-  enable: true ## https://github.com/settings/applications/new
+  enable: true ## https://github.com/settings/applications
   owner: dengtongcai ## Your GitHub ID, e.g. username
   repo: dengtongcai.github.io ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
   client_id: 5a3287a072bec8cc81b9 ## GitHub client ID, e.g. 75752dafe7907a897619
@@ -41,7 +41,7 @@ toc_number: true ## If you want to add list number to toc please set the value t
 shareto: false ## If you want to use the share button please set the value to true, and you must have hexo-helper-qrcode installed.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 wordcount: false ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
-widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
 canvas_nest:
   enable: false ## If you want to use dynamic background please set the value to true, you can also fill the following parameters to customize the dynamic effect, or just leave them blank to keep the default effect.
   color: ## RGB value of the color, e.g. "100,99,98"
@@ -74,6 +74,9 @@ menu:
   - page: about
     directory: about/
     icon: fa-user
+  - page: comments
+    directory: comments/
+    icon: fa-comments
   - page: rss
     directory: atom.xml
     icon: fa-rss
