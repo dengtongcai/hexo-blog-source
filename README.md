@@ -19,6 +19,11 @@ cnpm install -g hexo-cli
 cnpm install hexo --save
 ```
 
+## 初始化Hexo
+```
+hexo init
+```
+
 ## 安装主题和渲染器
 ```
 git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
