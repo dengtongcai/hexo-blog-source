@@ -4,13 +4,12 @@ date: 2018/5/21 16:06:53
 categories: JVM
 tags: [JVM]
 ---
-## java内存组成介绍：堆(Heap)和非堆(Non-heap)内存
 按照官方的说法：
-
 > Java 虚拟机具有一个堆，堆是运行时数据区域，所有类实例和数组的内存均从此处分配。堆是在 Java 虚拟机启动时创建的。在JVM中堆之外的内存称为非堆内存(Non-heap memory)。
 
 可以看出JVM主要管理两种类型的内存：堆和非堆。简单来说堆就是Java代码可及的内存，是留给开发人员使用的；非堆就是JVM留给 自己用的，所以方法区、JVM内部处理或优化所需的内存(如JIT编译后的代码缓存)、每个类结构(如运行时常数池、字段和方法数据)以及方法和构造方法 的代码都在非堆内存中。
-
+<!--more-->
+## java内存组成介绍：堆(Heap)和非堆(Non-heap)内存
 ### 组成图
 ![组成图](http://ooenom0ja.bkt.clouddn.com/r_sun-jdk-memory-area1.PNG)
 

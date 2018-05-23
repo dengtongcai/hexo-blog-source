@@ -4,7 +4,6 @@ date: 2018/5/21 16:04:21
 categories: JVM
 tags: [JVM]
 ---
-## 项目已使用到的参数
 ### -server：开启服务端模式。
 1. -client、-server这两个参数用于设置虚拟机使用何种运行模式，client模式启动比较快，但运行时性能和内存管理效率不如server模式，通常用于客户端应用程序。相反，server模式启动比client慢，但可获得更高的运行性能。
 2. 在 windows上，缺省的虚拟机类型为client模式，如果要使用server模式，就需要在启动虚拟机时加-server参数，以获得更高性能，对服 务器端应用，推荐采用server模式，尤其是多个CPU的系统。在Linux，Solaris上缺省采用server模式。
