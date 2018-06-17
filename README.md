@@ -13,17 +13,28 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 配置好使用`cnpm`
 
 ## 安装Hexo
+进入hexo-blog-source目录
 ```
 cnpm install -g hexo-cli
 cnpm install hexo --save
 ```
 
+## 初始化Hexo
+找个空目录执行初始化，然后把node_modules复制到hexo-blog-source下
+```
+hexo init
+```
+
 ## 安装主题和渲染器
-进入themes同级目录
 ```
 git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
 cnpm install hexo-renderer-pug --save
 cnpm install hexo-renderer-sass --save
+```
+
+## 分享插件
+```
+cnpm i -S hexo-helper-qrcode
 ```
 
 ## 编译生成静态文件
