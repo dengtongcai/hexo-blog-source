@@ -32,7 +32,16 @@ cnpm install hexo-renderer-pug --save
 cnpm install hexo-renderer-sass --save
 ```
 
+## 本地图床插件
+
+《_config.yml 》里的`post_asset_folder`这个选项设置为`true`
+
+```
+npm install hexo-asset-image --save
+```
+
 ## 分享插件
+
 ```
 cnpm i -S hexo-helper-qrcode
 ```

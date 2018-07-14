@@ -4,8 +4,6 @@ date: 2018/04/12 14:03:33
 categories: Linux，MySQL
 tags: [MySQL]
 ---
-## CentOS7下安装配置MySQL
-
 ### 1.准备资源
 
 - 下载MySQL源安装包
@@ -27,8 +25,7 @@ yum localinstall mysql57-community-release-el7-8.noarch.rpm
 yum repolist enabled | grep "mysql.*-community.*"
 ```
 
-安装成功如图
-![1](C:\Users\Administrator\Desktop\1.png)
+安装成功如图![1](1.png)
 
 可以修改`vim /etc/yum.repos.d/mysql-community.repo`源，改变默认安装的mysql版本。比如要安装5.6版本，将5.7源的`enabled=1`改成`enabled=0`。然后再将5.6源的`enabled=0`改成`enabled=1`即可。
 
@@ -50,7 +47,7 @@ yum install mysql-community-server
 systemctl status mysqld
 ```
 
-![2](C:\Users\Administrator\Desktop\2.png)
+![2](/2.png)
 
  ### 5.配置服务开机自启
 
@@ -69,7 +66,7 @@ systemctl daemon-reload
 grep 'temporary password' /var/log/mysqld.log
 ```
 
-![3](C:\Users\Administrator\Desktop\3.png)
+![3](/3.png)
 
 - 登录MySQL
 
@@ -100,7 +97,7 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH G
 
 注意：mysql5.7默认安装了密码安全检查插件（validate_password），默认密码检查策略要求密码必须包含：大小写字母、数字和特殊符号，并且长度不能少于8位。否则会提示ERROR 1819 (HY000): Your password does not satisfy the current policy requirements错误，如下图所示： 
 
-![4](C:\Users\Administrator\Desktop\4.png)
+![4](/4.png)
 
 通过MySQL环境变量可以查看密码策略的相关信息
 
@@ -108,7 +105,7 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH G
 show variables like '%password%';
 ```
 
-![5](C:\Users\Administrator\Desktop\5.png)
+![5](/5.png)
 
 - validate_password_policy：密码策略，默认为MEDIUM策略 
 - validate_password_dictionary_file：密码策略文件，策略为STRONG才需要 

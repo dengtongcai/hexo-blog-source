@@ -12,7 +12,7 @@ tags: [MySQL]
 
 #### 1.找到Java进程对应的pid 
 
-找pid的方法是:打开任务管理器，然后点击 “查看” 菜单，然后点击 “选择列”，把pid勾上，然后就可以在任务管理器里面看到所有进程的pid值了。(也可以用第三步中提到的工具直接查看)，windows10系统可以在详细信息直接查看 。![11](C:\Users\Administrator\Desktop\11.jpg)
+找pid的方法是:打开任务管理器，然后点击 “查看” 菜单，然后点击 “选择列”，把pid勾上，然后就可以在任务管理器里面看到所有进程的pid值了。(也可以用第三步中提到的工具直接查看)，windows10系统可以在详细信息直接查看 。![11](/1.jpg)
 
 
 
@@ -26,17 +26,20 @@ jstack -l pid > c:/31372.stack
 
 #### 3.在windows下只能查看进程的cpu占用率，要查看线程的cpu占用率要借助其他的工具，可以使用微软提供的 [Process Explorer](https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer)（点击前往下载页面） 
 
-#### 4.点击需要查看的进程右键properties![12](C:\Users\Administrator\Desktop\12.jpg)  
+#### 4.点击需要查看的进程右键properties  
+
+![12](/2.jpg)  
 
 
 
-#### 5.选择Threads选项卡，找到占用CPU的线程id![13](C:\Users\Administrator\Desktop\13.jpg)
+#### 5.选择Threads选项卡，找到占用CPU的线程id
+![13](/3.jpg)
 
 
 
 #### 6.把pid转换成16进制，我这里直接用系统自带的计算器转换，置于为什么要转换，是因为先前用jstack导出的信息里面线程对应的tid是16进制的。
 
-  ![14](C:\Users\Administrator\Desktop\14.jpg)
+  ![14]/4.jpg)
 
 
 
