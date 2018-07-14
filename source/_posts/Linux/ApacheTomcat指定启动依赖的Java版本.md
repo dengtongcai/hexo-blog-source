@@ -4,7 +4,6 @@ date: 2018/04/18 14:50:23
 categories: tomcat
 tags: [tomcat]
 ---
-## ApacheTomcat指定启动依赖的Java版本
 项目原来使用的jdk版本位1.7，导致机器上很多tomcat都是依赖jdk1.7版本。现在部分项目需要升级jdk1.8，则单独指定启动jdk路径
 
 ### 1. windows环境

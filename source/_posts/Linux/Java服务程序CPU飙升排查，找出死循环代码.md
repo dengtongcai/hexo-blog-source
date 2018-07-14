@@ -4,7 +4,6 @@ date: 2018/04/30 10:29:33
 categories: Linux，MySQL
 tags: [MySQL]
 ---
-## Java服务程序CPU飙升排查，找出死循环代码
 ### windows环境下CPU飙升问题
 线上某台runtime机器（windows Server）cpu报警，这种情况初步就是代码里面死循环了，先把机器下线了保证不再有新的任务分配进来，然而cpu使用依然不降这是正常的因为程序未结束死循环一直在运行。
 
