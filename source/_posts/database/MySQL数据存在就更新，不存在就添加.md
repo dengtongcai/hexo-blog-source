@@ -5,7 +5,7 @@ categories: db
 tags: [db，mysql]
 ---
 最近新功能有个需求优化，避免库里重复出现多条同一个手机号记录，以手机号作为主键并创建唯一索引，操作是添加条目但是又可能存在此唯一项，所以想到存在即更新。
-## ON DUPLICATE
+### ON DUPLICATE
 `INSERT` 语句的一部分，如果指定 `ON DUPLICATE KEY UPDATE` ，并且插入行后会导致在一个UNIQUE索引或PRIMARY KEY中出现重复值，则在出现重复值的行执行UPDATE，如果不会导致唯一值列重复的问题，则插入新行。
 
 ### SQL语句原型：
