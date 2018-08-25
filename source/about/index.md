@@ -6,4 +6,3 @@ Name: dengtongcai
 Email：[tongcai.deng@qq.com](mailto:tongcai.deng@qq.com "tongcai.deng@qq.com")
 GitHub：[dengtongcai](https://github.com/dengtongcai "dengtongcai")
 Weibo：[dengtongcai](https://weibo.com/dengtongcai "dengtongcai")
-我爱研究，渴望获得，也是个耿直boy。
