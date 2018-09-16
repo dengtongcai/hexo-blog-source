@@ -74,9 +74,12 @@ menu:
   - page: about
     directory: about/
     icon: fa-user
-  - page: rss
-    directory: atom.xml
-    icon: fa-rss
+  - page: books
+    directory: books/
+    icon: fa-book
+  - page: future
+    directory: future/
+    icon: fa-gift
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
