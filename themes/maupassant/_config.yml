@@ -77,6 +77,9 @@ menu:
   - page: books
     directory: books/
     icon: fa-book
+  - page: movie
+    directory: movie/
+    icon: fa-tv
   - page: future
     directory: future/
     icon: fa-gift
