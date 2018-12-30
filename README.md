@@ -1,4 +1,6 @@
 # hexo-blog-source
+[![Build Status](https://travis-ci.org/dengtongcai/hexo-blog-source.svg?branch=master)](https://travis-ci.org/dengtongcai/hexo-blog-source)
+
 博客源码，首次运行步骤
 
 ## 安装Git，Nodejs
