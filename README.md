@@ -66,3 +66,11 @@ cnpm install --save hexo-deployer-git
 hexo deploy
 ```
 
+## 自动部署
+
+```
+git push --quiet https://GH_TOKEN@github.com/dengtongcai/hexo-blog-source.git
+```
+
+
+
