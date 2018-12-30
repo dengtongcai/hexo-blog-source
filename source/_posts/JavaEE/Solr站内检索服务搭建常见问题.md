@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: Solr站内检索服务搭建常见问题
 date: 2015-06-10 12:16:32

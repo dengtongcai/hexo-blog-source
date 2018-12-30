@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: CentOS7下安装配置MySQL
 date: 2018/04/12 14:03:33  

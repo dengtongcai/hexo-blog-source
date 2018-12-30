@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: Hexo博客中添加功能之返回顶部
 date: 2016-06-03 22:28:53
@@ -54,7 +55,7 @@ hexo中实现返回顶部比较简单，因为hexo所搭建的博客都已经模
 ```
 <%- partial('totop') %>
 <script src="<%- config.root %>js/totop.js"></script>
- ```
+```
 ## 添加按钮图片 #
 
    网上Google一个回到顶部图标，复制到 /themes/yilia/source/imgs 目录下，文件名为 scrollup.png。

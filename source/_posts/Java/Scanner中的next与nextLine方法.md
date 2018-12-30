@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: 键盘录入Scanner类中的next()与nextLine()的问题
 date: 2013-06-01 21:32:10

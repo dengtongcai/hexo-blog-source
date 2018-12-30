@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: Solr站内全文检索服务
 date: 2015-06-08 18:36:22

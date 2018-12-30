@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: 为开源软件选择一个合适的开源许可证（Open Source License）
 date: 2018/09/15 16:00:12

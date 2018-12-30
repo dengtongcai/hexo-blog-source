@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: Lucene站内检索工具
 date: 2015-06-03 22:21:13
@@ -32,7 +33,7 @@ Lucene是apache软件基金会4 jakarta项目组的一个子项目，是一个�
 3. 为文档添加Field
 4. 创建建立索引对象IndexWriter
 5. 将文档添加到索引库中
- 
+
 ### 3.3	基于索引库检索过程
 1. 将检索内容转成query对象 
 2. 创建检索对象

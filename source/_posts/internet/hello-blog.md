@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: Hello Blog
 date: 2013-06-01 21:28:53

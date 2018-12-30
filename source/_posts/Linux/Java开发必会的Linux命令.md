@@ -1,3 +1,4 @@
+---
 layout: '[layout]'
 title: Java开发必会的Linux命令
 date: 2018/03/06 13:23:53  
@@ -150,9 +151,24 @@ java javac [jps](https://link.juejin.im/?target=http%3A%2F%2Fwww.hollischuang.co
 
 svn git maven
 
-### 28.linux命令学习网站:
+###30.查看指定端口资源消耗
+
+`top`
+
+- -h | -v: 显示帮助或者版本信息】
+- -c: 命令行列显示程序名以及参数
+- -d: 启动时设置刷新时间间隔
+- -H： 设置线程模式
+- -i: 只显示活跃进程
+- -n: 显示指定数量的进程
+- -p: 显示指定PID的进程
+- -u: 显示指定用户的进程
+
+### linux命令学习网站:
 
 [explainshell.com/](https://link.juejin.im/?target=http%3A%2F%2Fexplainshell.com%2F)
+
+
 
 ### 参考资料：
 
