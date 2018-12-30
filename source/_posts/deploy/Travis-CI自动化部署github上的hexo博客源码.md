@@ -15,13 +15,13 @@ tags: [Travis-CI，Hexo，git]
 
 注意：这里生成的token最好先记下来，不然关闭页面后找不到又得`regenerate token`
 
-![](E:\hexo-blog-source\source\_posts\deploy\Travis-CI自动化部署github上的hexo博客源码\1.png)
+![1](/1.png)
 
 #### 第二步：注册并开启Travis-CI项目构建
 
 使用 GitHub账户登录 [Travis-CI官网](https://travis-ci.org/) 进去后能看到已经自动关联了 GitHub 上的仓库。这里我们选择需要启用的项目，即 `blog-source`。然后点击后面的`Settings`进入设置界面。
 
-![](E:\hexo-blog-source\source\_posts\deploy\Travis-CI自动化部署github上的hexo博客源码\2.png)
+![2](/2.png)
 
 #### 第三步：配置Travis-CI自动构建
 
@@ -37,7 +37,7 @@ tags: [Travis-CI，Hexo，git]
 
 GH_TOKEN，是我们第一步在github中生成的access token，因为要从github上将代码拉到travis-ci机器上进行构建，所以需要该token授权。
 
-![](E:\hexo-blog-source\source\_posts\deploy\Travis-CI自动化部署github上的hexo博客源码\3.png)
+![3](/3.png)
 
 #### 第四步：配置hexo的_config.yml
 
