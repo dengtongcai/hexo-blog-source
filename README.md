@@ -1,5 +1,5 @@
 # hexo-blog-source
-博客源码，运行步骤
+博客源码，首次运行步骤
 
 ## 安装Git，Nodejs
 
@@ -27,7 +27,7 @@ hexo init
 
 ## 安装主题和渲染器
 ```
-git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
+git clone https://github.com/dengtongcai/maupassant-hexo.git themes/maupassant
 cnpm install hexo-renderer-pug --save
 cnpm install hexo-renderer-sass --save
 ```
