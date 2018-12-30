@@ -79,6 +79,6 @@ theme: maupassant
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repo: http://github.com/dengtongcai/dengtongcai.github.io.git
+  repo: http://GH_token@github.com/dengtongcai/dengtongcai.github.io.git
   branch: master
     
