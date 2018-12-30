@@ -24,7 +24,7 @@ install:
   - npm install hexo-renderer-sass --save
   - npm install hexo-asset-image --save
   - npm i -S hexo-helper-qrcode
-  - npm i --save gitment
+  - npm i --save gitalk
 # 执行脚本，先hexo clean 再 hexo generate，会使用hexo的同学应该不陌生。
 script:
   - hexo clean

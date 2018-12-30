@@ -13,7 +13,7 @@ gitment:
 gitalk:
   enable: true ## https://github.com/settings/applications
   owner: dengtongcai ## Your GitHub ID, e.g. username
-  repo: gitalk-comments ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  repo: dentongcai.github.io ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
   client_id: 5a3287a072bec8cc81b9 ## GitHub client ID, e.g. 75752dafe7907a897619
   client_secret: 760f85c1dab2461df383dd64b67a826c4269ebd9 ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
   admin: dengtongcai ## Github repo owner and collaborators, only these guys can initialize github issues.
