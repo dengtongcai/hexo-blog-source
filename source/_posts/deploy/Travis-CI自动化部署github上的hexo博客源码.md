@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: Travis-CI自动化部署github上的hexo博客源码
 date: 2018-12-30 20:59:58
-categories: 部署
+categories: 后端
 tags: [Travis-CI,Hexo,git]
 ---
 之前一直使用hexo静态博客，每次写完东西都需要手动deploy，而且经常环境还出问题，比较恶心。但是！！！今天偶然发现了Travis-CI这个服务，以前只觉得它是用来给代码build验证跑单元测试晕(((φ(◎ロ◎;)φ)))，并没有实际使用过。我们使用github账号授权Travis-CI后，可以配置Travis-CI监听我们的repository动态，当有push或pull request过来的时候，Travis-CI会自动帮我们按照`.travis.yml`的配置进行build和deploy。下面我们来看看是怎么配置的。

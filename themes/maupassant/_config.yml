@@ -71,18 +71,12 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive
-  - page: about
-    directory: about/
-    icon: fa-user
   - page: books
     directory: books/
     icon: fa-book
   - page: movie
     directory: movie/
     icon: fa-tv
-  - page: future
-    directory: future/
-    icon: fa-gift
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
