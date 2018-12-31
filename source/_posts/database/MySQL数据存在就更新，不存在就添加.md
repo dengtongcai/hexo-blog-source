@@ -6,13 +6,16 @@ categories: 数据库
 tags: [db，mysql]
 ---
 最近新功能有个需求优化，避免库里重复出现多条同一个手机号记录，以手机号作为主键并创建唯一索引，操作是添加条目但是又可能存在此唯一项，所以想到存在即更新。
-### ON DUPLICATE
+#### 1 ON DUPLICATE
+
 `INSERT` 语句的一部分，如果指定 `ON DUPLICATE KEY UPDATE` ，并且插入行后会导致在一个UNIQUE索引或PRIMARY KEY中出现重复值，则在出现重复值的行执行UPDATE，如果不会导致唯一值列重复的问题，则插入新行。
 
-### SQL语句原型：
+#### SQL语句原型：
+
 `INSERT INTO table (player_id,award_type,num) VALUES (20001,0,1) ON  DUPLICATE KEY UPDATE num=num+values(num)`
 
-### 实现思路：
+#### 实现思路：
+
   如果没有用户幸运值改变+1  ，新表中没有用户信息就添加
  1、判断用户信息是否存在 （不存在添加）
  2、存在修改用户幸运值个数
@@ -49,8 +52,7 @@ CREATE TABLE `willow_player` (
 ```
 这样只有两个字段值内容全部一样时才会更新！！！   注意  id 会跳跃哦  mysql 机制原因
 
-
-## REPLACE
+#### 2 REPLACE
 
 讨人喜欢的 MySQL replace into 用法（insert into 的增强版）
 

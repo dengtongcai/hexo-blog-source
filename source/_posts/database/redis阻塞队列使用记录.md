@@ -6,6 +6,8 @@ categories: 数据库
 tags: redis，list，blockingQuene
 ---
 
+由于项目重构需要，之前原本保存在应用内存下的一个BlockingQuene，需要修方案放到redis里面，所以一对一的写了一个RedisBlockingQuene，但是过程中发现redis的list中，阻塞做了小优化，让我们看看吧。
+
 ### 日常使用的redis命令
 
 连接redis，并登录
@@ -127,6 +129,11 @@ OK
 127.0.0.1:6379> BLPOP list list1 0
 |	#waiting直到拿到值
 ```
+
+这里支持从多个list中获取，我个人感觉应该是有多种考虑可能
+
+- 减少阻塞的连接数，间接提高连接使用率。但是实际应用中，同一个功能可以从多个list里面拿数据的并不是很多。
+- 还有一种就是针对`BRPOPLPUSH`的备份命令，如果从原队列没拿到，继续从备份对接获取值
 
 ### 曾经使用场景
 
