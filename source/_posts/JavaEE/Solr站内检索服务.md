@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: Solr站内全文检索服务
 date: 2015-06-08 18:36:22
-categories: Lucene
+categories: 教程
 tags: [框架,站内检索]
 ---
 ## Solr服务

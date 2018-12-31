@@ -2,9 +2,8 @@
 layout: '[layout]'
 title: 为开源软件选择一个合适的开源许可证（Open Source License）
 date: 2018/09/15 16:00:12
-categories: git license
-
-tags: [git，license]
+categories: 教程
+tags: [git,license]
 ---
 
 之前知道开源协议这么一回事，比如Apache、Apache2，但是并不知道具体赋予了哪些权力，可能我们使用开源软件的时候只要不是用于商业用途，压根不关心使用的是什么协议。今天在B站看到一个视频讲富文本的，说到一些富文本编辑器使用的开源协议是MIT，可以作为商业使用，突然想了解一下常用的开源协议有哪些，分别有什么权限。

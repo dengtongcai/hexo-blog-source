@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: Lucene站内检索工具
 date: 2015-06-03 22:21:13
-categories: Lucene
+categories: 教程
 tags: [框架,站内检索]
 ---
 ## 1 Lucene介绍

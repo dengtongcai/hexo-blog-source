@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: JVM线上故障排查记录
 date: 2018/5/21 16:05:18  
-categories: JVM
+categories: 后端
 tags: [JVM]
 ---
 ### 任务停留在异常阶段

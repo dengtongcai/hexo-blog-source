@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: Solr站内检索服务搭建常见问题
 date: 2015-06-10 12:16:32
-categories: Lucene
+categories: 教程
 tags: [BUG,站内检索]
 ---
 在自定义索引库时，这时需要添加collection，添加的collection配置需要与生产环境保持一致，于是复制默认的collection1 的配置信息作为新的collection复制完成，新的collection events也添加完成；但是加载时总是报错不能正确加载solrconfig.xml信息，也知道schema.xml等数据肯定是要修改的，schema.xml配置信息修改完成后还是有这样的问题，在往solr写入数据时又再次报错undefined filed message，但是message字段确实已经配置好了；检查之后再次重启solr，查看刚才events 直接显示 “There exists no core with name "events",

@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: JVM系列(一):JVM内存组成及分配
 date: 2018/5/21 16:06:53  
-categories: JVM
+categories: 后端
 tags: [JVM]
 ---
 按照官方的说法：

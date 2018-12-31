@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: Tomcat日志catalina.out自动分割(linux)
 date: 2018/5/21 17:06:53  
-categories: Linux
+categories: 后端,教程
 tags: [Linux,cronolog,nginx,tomcat]
 ---
 Tomcat服务器长时间运行，catalina.out文件越来越大，会导致服务器io性能降低。虽然tomcat有默认的日志分割功能，能每天自动生成类似catalina.2018-10-08.log的文件，但是默认catalina.out文件却一直增长，到一定大小时很占磁盘空间，影响性能，且会报错。

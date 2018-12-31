@@ -51,8 +51,8 @@ canvas_nest:
 donate:
   enable: false ## If you want to display the donate button after each post, please set the value to true and fill the following items on your need. You can also enable donate button in a page by adding a "donate: true" item to the front-matter.
   github: ## GitHub URL, e.g. https://github.com/Kaiyuan/donate-page
-  alipay_qr: ## Path of Alipay QRcode image, e.g. /img/AliPayQR.png
-  wechat_qr: ## Path of Wechat QRcode image, e.g. /img/WeChatQR.png
+  alipay_qr: /img/AliPayQR.png ## Path of Alipay QRcode image, e.g. /img/AliPayQR.png
+  wechat_qr: /img/WeChatQR.png ## Path of Wechat QRcode image, e.g. /img/WeChatQR.png
   btc_qr: ## Path of Bitcoin QRcode image, e.g. /img/BTCQR.png
   btc_key: ## Bitcoin key, e.g. 1KuK5eK2BLsqpsFVXXSBG5wbSAwZVadt6L
   paypal_url: ## Paypal URL, e.g. https://www.paypal.me/tufu9441
@@ -93,12 +93,8 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - links
 
 links:
-  - title: weibo
-    url: https://weibo.com/dengtongcai
-  - title: Email
-    url: mailto:tongcai.deng@qq.com
-  - title: Github
-    url: https://github.com/dengtongcai
+  - title: wechat：mikell
+    url: 
 
 timeline:
   - num: 1
@@ -115,4 +111,4 @@ js: js
 css: css
 
 # Theme version
-version: 0.0.0
+version: 0.0.1

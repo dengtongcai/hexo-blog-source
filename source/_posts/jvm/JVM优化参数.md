@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: JVM优化参数
 date: 2018/5/21 16:04:21 
-categories: JVM
+categories: 后端
 tags: [JVM]
 ---
 ### -server：开启服务端模式。

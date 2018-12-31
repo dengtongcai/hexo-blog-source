@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: Java开发必会的Linux命令
 date: 2018/03/06 13:23:53  
-categories: Linux
+categories: 后端
 tags: [Linux]
 ---
 本文并不会对所有命令进行详细讲解，只给出常见用法和解释。具体用法可以使用`--help`查看帮助或者直接通过google搜索学习。

@@ -2,7 +2,7 @@
 layout: '[layout]'
 title: Java服务程序CPU飙升排查，找出死循环代码
 date: 2018/04/30 10:29:33  
-categories: Linux，MySQL
+categories: 后端
 tags: [MySQL]
 ---
 ### windows环境下CPU飙升问题
