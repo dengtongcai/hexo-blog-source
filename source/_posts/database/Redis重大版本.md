@@ -1,7 +1,7 @@
 ---
 layout: '[layout]'
 title: redis重大版本更新日志
-date: ‎2018‎-‎11‎-‎22‎ ‏‎9:40:13
+date: 2018-11-22 09:40:13
 categories: 后端
 tags: [redis,版本]
 ---
