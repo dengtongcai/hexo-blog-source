@@ -9,7 +9,7 @@ tags: [buddy,自动化部署,适合个人]
 
 下面就是我用buddy的开箱过程。
 
-#### 注册并绑定github账号
+### 注册并绑定github账号
 
 打开[Buddy官网](https://app.buddy.works/login)注册账号后绑定github，建议直接使用github账号登录，然后请求授予Buddy应用github权限，选好付费类型后，然后你就能在buddy个人空间看到你所有的github项目并进行配置了。
 
@@ -17,63 +17,63 @@ tags: [buddy,自动化部署,适合个人]
 
 
 
-#### 配置pipeline
+### 配置pipeline
 
-1. 选择好我们要集成的项目后，buddy会自动识别项目类型
+#### 选择好我们要集成的项目后，buddy会自动识别项目类型
 
-   ![1](/2.png)
+![1](/2.png)
 
-2. 配置pipeline基本信息，包括：名称，触发模式（手动-Manual，推送代码时-On push，定时-Recurrently），需要触发pipeline的分支或者tag
+#### 配置pipeline基本信息，包括：名称，触发模式（手动-Manual，推送代码时-On push，定时-Recurrently），需要触发pipeline的分支或者tag
 
-   ![3](/3.png)
+![3](/3.png)
 
-3. 配置触发pipeline后的操作（Actions）
+#### 配置触发pipeline后的操作（Actions），对应以下内容
 
-   ![4](/4.png)
+![4](/4.png)
 
-   - 从github仓库更新代码
+从github仓库更新代码
 
-   - 执行maven clean install
+执行maven clean install
 
-     ```shell
-     mvn clean install
-     ```
+```shell
+mvn clean install
+```
 
-   - 使用ssh远程连接(使用密码或者SSH key)部署服务器，停止应用，备份jar包
+使用ssh远程连接(使用密码或者SSH key)部署服务器，停止应用，备份jar包
 
-     ```shell
-     # kill pid
-     echo '杀死应用：quick-report-0.0.1-SNAPSHOT.jar'
-     pid=$(ps -ef | grep quick-report-0.0.1-SNAPSHOT.jar | grep -v grep|tail|more|less| awk '{print $2}')
-     echo ----kill process ------
-     echo $pid
-     echo -----------------------
-     if [-n $pid]
-     then
-     	kill -9 $pid
-     else
-     	echo quick-report-0.0.1-SNAPSHOT.jar already stoped
-     fi
-     # print pid
-     echo '查看进程是否存在'
-     ps -ef | grep quick-report-0.0.1-SNAPSHOT.jar | grep -v grep|tail|more|less| awk '{print $2}'
-     # remove jar
-     echo '备份：quick-report-0.0.1-SNAPSHOT.jar'
-     file_time=$(date +%Y%m%d%k%M%S)
-     mv quick-report-0.0.1-SNAPSHOT.jar ./bak/quick-report-0.0.1-SNAPSHOT.jar_$file_time
-     ```
+```shell
+# kill pid
+echo '杀死应用：quick-report-0.0.1-SNAPSHOT.jar'
+pid=$(ps -ef | grep quick-report-0.0.1-SNAPSHOT.jar | grep -v grep|tail|more|less| awk '{print $2}')
+echo ----kill process ------
+echo $pid
+echo -----------------------
+if [-n $pid]
+then
+	kill -9 $pid
+else
+	echo quick-report-0.0.1-SNAPSHOT.jar already stoped
+fi
+# print pid
+echo '查看进程是否存在'
+ps -ef | grep quick-report-0.0.1-SNAPSHOT.jar | grep -v grep|tail|more|less| awk '{print $2}'
+# remove jar
+echo '备份：quick-report-0.0.1-SNAPSHOT.jar'
+file_time=$(date +%Y%m%d%k%M%S)
+mv quick-report-0.0.1-SNAPSHOT.jar ./bak/quick-report-0.0.1-SNAPSHOT.jar_$file_time
+```
 
-   - 上传打包好的jar
+上传打包好的jar
 
-   - 启动应用
+启动应用
 
-     ```shell
-     export JAVA_HOME=/root/java/jdk1.8.0_161
-     export JRE_HOME=/root/java/jdk1.8.0_161/jre
-     # statr quick-report-0.0.1-SNAPSHOT.jar
-     echo 'start quick-report-0.0.1-SNAPSHOT.jar'
-     sh startup.sh
-     ps -ef | grep quick-report-0.0.1-SNAPSHOT.jar | grep -v grep|tail|more|less| awk '{print $2}'
-     ```
+```shell
+export JAVA_HOME=/root/java/jdk1.8.0_161
+export JRE_HOME=/root/java/jdk1.8.0_161/jre
+# statr quick-report-0.0.1-SNAPSHOT.jar
+echo 'start quick-report-0.0.1-SNAPSHOT.jar'
+sh startup.sh
+ps -ef | grep quick-report-0.0.1-SNAPSHOT.jar | grep -v grep|tail|more|less| awk '{print $2}'
+```
 
-4. 然后我们就可以点击`Run pipeline`来执行部署了，每一步执行过程都有log可供查看，如果执行失败可以重新执行当前action。
+最后我们就可以点击`Run pipeline`来执行部署了，每一步执行过程都有log可供查看，如果执行失败可以重新执行当前action。
