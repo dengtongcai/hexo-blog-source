@@ -175,17 +175,12 @@ echo ------统计完成-------
        string=$line
        str=${string//|/ }
        echo str 长度: ${#str[@]}
-   	for each in ${str[*]}
-       do
-       	echo $each
-       done
+   	echo $str--${str[*]}
+       
        echo ------赋值给 arr-----
        arr=($str)
        echo arr 长度：${#arr[@]}
-       for each in ${arr[*]}
-       do
-       	echo $each
-       done
+       echo $arr--${arr[*]}
    done
    ```
 
@@ -193,25 +188,31 @@ echo ------统计完成-------
 
    ```shell
    str 长度: 1
-   1
-   2
-   3
-   4
-   5
-   6
-   7
+   99 2 3 4 5 6 7--99 2 3 4 5 6 7
    ------赋值给 arr-----
    arr 长度：7
-   1
-   2
-   3
-   4
-   5
-   6
-   7
+   99--99 2 3 4 5 6 7
    ```
 
-   问：长度为什么不一样？
+   解析
+
+   ```shell
+   #!/bin/bash
+   while read line
+   do
+       string=$line				#99|2|3|4|5|6|7
+       str=${string//|/ }			#"99 2 3 4 5 6 7",str字符串类型
+       echo str 长度: ${#str[@]}
+   	echo $str--${str[*]}		
+       
+       echo ------赋值给 arr-----
+       arr=($str)					#(99 2 3 4 5 6 7)，arr数组类型
+       echo arr 长度：${#arr[@]}
+       echo $arr--${arr[*]}		#$arr默认是第一个元素
+   done
+   ```
+
+   终于把shell这些疑问解决了！
 
 
 ### 最终代码
