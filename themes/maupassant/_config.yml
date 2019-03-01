@@ -80,13 +80,16 @@ menu:
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
+   - links
   - category
   - tag
   - recent_posts
   - recent_comments
-  - links
+
 
 links:
+  - title: Pandora.Java
+    url: https://www.datoucai.me/interview/
   - title: wechat：mikell
     url: 
 
