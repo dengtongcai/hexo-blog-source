@@ -89,7 +89,7 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
 
 links:
   - title: Pandora.Java
-    url: https://www.datoucai.me/interview/
+    url: https://datoucai.me/interview/
   - title: wechat：mikell
     url: 
 
