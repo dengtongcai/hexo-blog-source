@@ -9,14 +9,16 @@ tags: [Spring Boot,源码]
 
 1. 代码部分
 
-```java
-@SpringBootApplication
-public class WebApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(WebApplication.class, args);
-    }
-}
-```
+   ```java
+   @SpringBootApplication
+   public class WebApplication {
+       public static void main(String[] args) {
+           SpringApplication.run(WebApplication.class, args);
+       }
+   }
+   ```
+
+   
 
 2. 注解`@SpringBootApplication`
 
@@ -161,36 +163,42 @@ public class WebApplication {
 
    
 
-准备上下文
+3. 准备上下文
 
-```java
-private void prepareContext(ConfigurableApplicationContext context,
-			ConfigurableEnvironment environment, SpringApplicationRunListeners listeners,
-			ApplicationArguments applicationArguments, Banner printedBanner) {
-    //设置环境参数：激活哪个profiles，加载application.properties下配置的Property
-    context.setEnvironment(environment);
-    postProcessApplicationContext(context);
-    applyInitializers(context);
-    listeners.contextPrepared(context);
-    if (this.logStartupInfo) {
-        logStartupInfo(context.getParent() == null);
-        logStartupProfileInfo(context);
-    }
-    // Add boot specific singleton beans
-    ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
-    beanFactory.registerSingleton("springApplicationArguments", applicationArguments);
-    if (printedBanner != null) {
-        beanFactory.registerSingleton("springBootBanner", printedBanner);
-    }
-    if (beanFactory instanceof DefaultListableBeanFactory) {
-        ((DefaultListableBeanFactory) beanFactory)
-        .setAllowBeanDefinitionOverriding(this.allowBeanDefinitionOverriding);
-    }
-    // Load the sources
-    Set<Object> sources = getAllSources();
-    Assert.notEmpty(sources, "Sources must not be empty");
-    load(context, sources.toArray(new Object[0]));
-    listeners.contextLoaded(context);
-}
-```
+   ```java
+   private void prepareContext(ConfigurableApplicationContext context,
+   			ConfigurableEnvironment environment, SpringApplicationRunListeners listeners,
+   			ApplicationArguments applicationArguments, Banner printedBanner) {
+       //设置环境参数：激活哪个profiles，加载application.properties下配置的Property
+       context.setEnvironment(environment);
+       postProcessApplicationContext(context);
+       applyInitializers(context);
+       listeners.contextPrepared(context);
+       if (this.logStartupInfo) {
+           logStartupInfo(context.getParent() == null);
+           logStartupProfileInfo(context);
+       }
+       // Add boot specific singleton beans
+       ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
+       beanFactory.registerSingleton("springApplicationArguments", applicationArguments);
+       if (printedBanner != null) {
+           beanFactory.registerSingleton("springBootBanner", printedBanner);
+       }
+       if (beanFactory instanceof DefaultListableBeanFactory) {
+           ((DefaultListableBeanFactory) beanFactory)
+           .setAllowBeanDefinitionOverriding(this.allowBeanDefinitionOverriding);
+       }
+       // Load the sources
+       Set<Object> sources = getAllSources();
+       Assert.notEmpty(sources, "Sources must not be empty");
+       load(context, sources.toArray(new Object[0]));
+       listeners.contextLoaded(context);
+   }
+   ```
+
+   
+
+
+
+
 
