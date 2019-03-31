@@ -73,17 +73,17 @@ jstack pid > error.log
 
 
 
-#### 4.目标线程pid转16进制
+#### 4.目标线程nid转16进制
 
 ```
-pringf "%x\n" pid
+printf "%x\n" pid
 ```
 
 
 
-#### 5.查找error.log中pid16进制转化后的位置 
+#### 5.查找error.log中nid16进制转化后的位置 
 
 ```
-grep pif error.log --color
+grep nid error.log --color
 ```
 
